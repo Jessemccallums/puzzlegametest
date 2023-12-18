@@ -1,0 +1,78 @@
+
+.App {
+  text-align: center;
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.puzzle {
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  grid-gap: 0px;
+  position: relative;
+}
+
+/* .piece {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  background-size: 400px 400px;
+  cursor: grab;
+} */
+
+.spot {
+  width: 100px;
+  height: 100px;
+  border: 1px dashed #ccc;
+  background-size: 400px 400px;
+}
+
+.spot.over {
+  border-color: blue;
+}
+
+.completion-message {
+  margin-top: 20px;
+  font-size: 24px;
+  color: #4CAF50;
+}
+
+
+.piece {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  background-size: 400px 400px;
+  cursor: grab;
+  clip-path: polygon(50% 0%, 100% 0, 100% 50%, 100% 100%, 50% 100%, 0 100%, 0 50%, 0 0);
+  /* Add more complex shapes as needed */
+}
+/* 
+
+/* You can add pseudo-elements for tabs and blanks */
+.piece::before, .piece::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: inherit;
+  /* Style these to create tabs or blanks */
+}
+
+/* Example for a tab on the right side */
+.piece::before {
+  right: -10px;
+  top: 40px;
+  border-radius: 50%;
+  clip-path: circle(50% at 50% 50%);
+} */
